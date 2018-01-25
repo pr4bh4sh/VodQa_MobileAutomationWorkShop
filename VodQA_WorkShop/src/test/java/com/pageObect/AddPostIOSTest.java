@@ -38,7 +38,7 @@ public class AddPostIOSTest {
         wait.until(ExpectedConditions
             .elementToBeClickable(By.id("new-editor-modal-dismiss-button")));
         driver.findElementById("new-editor-modal-dismiss-button").click();
-        driver.findElementByClassName("UIATableCell").click();
+        driver.findElementByClassName("XCUIElementTypeCell").click();
         driver.findElementById("New Post").click();
         wait.until(ExpectedConditions.elementToBeClickable(By.id("Post title")));
         driver.findElementByXPath("//UIAApplication[1]/UIAWindow[1]/UIAScrollView[1]/UIAWebView[1]/UIATextField[1]e").sendKeys("VodQAPune");

@@ -34,8 +34,8 @@ public class RecipeTouchActionTest {
 		File appDir = new File(classpathRoot, "/build/");
 		File app = new File(appDir, "Recipes.app");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("platformVersion", "8.4");
-		capabilities.setCapability("deviceName", "iPhone 5s");
+		capabilities.setCapability("platformVersion", "11.0");
+		capabilities.setCapability("deviceName", "iPhone 7");
 		capabilities.setCapability("app", app.getAbsolutePath());
 		driver = new IOSDriver<IOSElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 		wait = new WebDriverWait(driver, 30);

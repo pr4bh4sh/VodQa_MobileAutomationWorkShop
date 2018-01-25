@@ -1,5 +1,6 @@
 package com.appium.ios.test;
 
+import io.appium.java_client.remote.MobileCapabilityType;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -29,11 +30,12 @@ public class IOSWebTest {
     @Before
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName", "iPhone 6s");
+        capabilities.setCapability("platformVersion", "11.0");
+        capabilities.setCapability("deviceName", "iPhone 7");
         capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("platformVersion", "9.0");
         capabilities.setCapability("browserName", "safari");
-        driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"),
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+      driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"),
                 capabilities);
         //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }

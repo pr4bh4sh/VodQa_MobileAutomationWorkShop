@@ -25,8 +25,8 @@ public class WordPress {
 		// set up appium
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9.2");
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 6");
+		capabilities.setCapability("platformVersion", "11.0");
+		capabilities.setCapability("deviceName", "iPhone 7");
 		capabilities.setCapability(MobileCapabilityType.APP,
 			System.getProperty("user.dir") + "/build/WordPress.app");
 		driver = new IOSDriver<IOSElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);

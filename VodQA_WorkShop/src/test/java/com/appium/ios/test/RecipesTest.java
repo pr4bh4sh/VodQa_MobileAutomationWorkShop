@@ -67,7 +67,7 @@ public class RecipesTest {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("Chocolate Cake")));
 		driver.findElementById("Chocolate Cake").click();
 		driver.findElementById("Edit").click();
-		driver.findElementByXPath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/UIATableCell[2]/UIAButton[2]")
+		driver.findElementByXPath("//UIAApplication[1]/UIAWindow[2]/UIATableView[1]/XCUIElementTypeCell[2]/UIAButton[2]")
 				.click();
 		driver.findElement(MobileBy.IosUIAutomation(".elements()[1].cells()[0].textFields()")).click();
 		driver.findElement(MobileBy.IosUIAutomation(".elements()[1].cells()[0].textFields()")).sendKeys("cheese");
